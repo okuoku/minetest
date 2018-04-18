@@ -99,6 +99,7 @@ void GUIConfirmRegistration::regenerateGui(v2u32 screensize)
 		snprintf(info_text_buf, sizeof(info_text_buf), info_text_template.c_str(),
 				address.c_str(), m_playername.c_str());
 
+#if 0
 		gui::IGUIEditBox *e = new gui::intlGUIEditBox(
 				utf8_to_wide_c(info_text_buf), true, Environment, this,
 				ID_message, rect2, false, true);
@@ -106,6 +107,7 @@ void GUIConfirmRegistration::regenerateGui(v2u32 screensize)
 		e->setMultiLine(true);
 		e->setWordWrap(true);
 		e->setTextAlignment(gui::EGUIA_UPPERLEFT, gui::EGUIA_CENTER);
+#endif
 	}
 
 	ypos += 210;
