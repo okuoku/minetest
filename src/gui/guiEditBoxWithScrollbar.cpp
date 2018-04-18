@@ -13,6 +13,11 @@
 #include "porting.h"
 #include "Keycodes.h"
 
+#ifndef _IRR_IMPLEMENT_MANAGED_MARSHALLING_BUGFIX
+        // newer Irrlicht versions no longer have this
+#define _IRR_IMPLEMENT_MANAGED_MARSHALLING_BUGFIX
+#endif
+
 
 /*
 todo:
