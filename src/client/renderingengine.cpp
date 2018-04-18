@@ -88,6 +88,8 @@ RenderingEngine::RenderingEngine(IEventReceiver *receiver)
 	}
 
 	SIrrlichtCreationParameters params = SIrrlichtCreationParameters();
+        // FIXME: Enforce GLES2
+        driverType = video::EDT_OGLES2;
 	params.DriverType = driverType;
 	params.WindowSize = core::dimension2d<u32>(screen_w, screen_h);
 	params.Bits = bits;
