@@ -41,15 +41,19 @@ void RenderingCorePageflip::drawAll()
 
 void RenderingCorePageflip::useEye(bool _right)
 {
+#if 0
 	driver->setRenderTarget(_right ? video::ERT_STEREO_RIGHT_BUFFER
 				       : video::ERT_STEREO_LEFT_BUFFER,
 			true, true, skycolor);
+#endif
 	RenderingCoreStereo::useEye(_right);
 }
 
 void RenderingCorePageflip::resetEye()
 {
+#if 0
 	driver->draw2DImage(hud, v2s32(0, 0));
 	driver->setRenderTarget(video::ERT_FRAME_BUFFER, false, false, skycolor);
+#endif
 	RenderingCoreStereo::resetEye();
 }
